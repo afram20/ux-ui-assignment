@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="topbar">
+        <div class="logo">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Training 2026</span>
+        </div>
+
+        <div class="top-actions">
+            <button id="moveSidebarBtn" class="top-button" type="button"
+                    aria-pressed="false" title="Move navigation to the other side">
+                <i class="fa-solid fa-arrows-left-right"></i>
+                <span id="moveSidebarText">Move Sidebar</span>
+            </button>
+
+            <button id="languageBtn" class="top-button" type="button">
+                <i class="fa-solid fa-globe"></i>
+                <span id="languageText">English</span>
+            </button>
+
+            <button id="studentBtn" class="top-button" type="button">
+                <i class="fa-solid fa-user-plus"></i>
+                <span data-i18n="addStudent">Add Student</span>
+            </button>
+
+            <button id="clearBtn" class="top-button" type="button">
+                <i class="fa-solid fa-trash"></i>
+                <span data-i18n="clearCache">Clear Cache</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- The layout uses CSS Grid so the sidebar can move to either side. -->
+    <div class="layout" id="pageLayout">
+
+        <!-- SIDE NAVIGATION -->
+        <aside class="sidebar" id="sidebar">
+            <nav aria-label="Main navigation" data-i18n-aria="mainNavigation">
+                <a href="#" class="nav-link active" data-page="Dashboard">
+                    <i class="fa-solid fa-house"></i><span data-i18n="dashboard">Dashboard</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Web Design">
+                    <i class="fa-solid fa-globe"></i><span data-i18n="webDesign">Web Design</span>
+                </a>
+                <a href="#" class="nav-link" data-page="UI Layers">
+                    <i class="fa-solid fa-layer-group"></i><span data-i18n="uiLayers">UI Layers</span>
+                </a>
+                <a href="#" class="nav-link" data-page="AI Courses">
+                    <i class="fa-solid fa-robot"></i><span data-i18n="aiCourses">AI Courses</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Components">
+                    <i class="fa-solid fa-puzzle-piece"></i><span data-i18n="components">Components</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Templates">
+                    <i class="fa-solid fa-file-lines"></i><span data-i18n="templates">Templates</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Widgets">
+                    <i class="fa-solid fa-table-cells"></i><span data-i18n="widgets">Widgets</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Projects">
+                    <i class="fa-solid fa-folder"></i><span data-i18n="projects">Projects</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Live Preview">
+                    <i class="fa-solid fa-eye"></i><span data-i18n="livePreview">Live Preview</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Responsive Design">
+                    <i class="fa-solid fa-mobile-screen"></i><span data-i18n="responsiveDesign">Responsive Design</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Code Preview">
+                    <i class="fa-solid fa-code"></i><span data-i18n="codePreview">Code Preview</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Typography">
+                    <i class="fa-solid fa-font"></i><span data-i18n="typography">Typography</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Animation">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i><span data-i18n="animation">Animation</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Plugins">
+                    <i class="fa-solid fa-plug"></i><span data-i18n="plugins">Plugins</span>
+                </a>
+                <a href="#" class="nav-link" data-page="Settings">
+                    <i class="fa-solid fa-gear"></i><span data-i18n="settings">Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- DRAG THIS DIVIDER TO CHANGE THE SIDEBAR WIDTH -->
+        <div class="resize-handle" id="resizeHandle" role="separator"
+             aria-label="Resize navigation sidebar" data-i18n-aria="resizeSidebar" aria-orientation="vertical"
+             aria-valuemin="150" aria-valuemax="340" aria-valuenow="220"
+             tabindex="0" title="Drag to resize the sidebar. Double-click to reset." data-i18n-title="resizeHelp">
+            <span></span>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- HERO BANNER -->
+            <section class="hero">
+                <div class="hero-left">
+                    <!-- These shapes move continuously from right to left. -->
+                    <div class="animated-shapes" aria-hidden="true">
+                        <span class="moving-shape shape-a"></span>
+                        <span class="moving-shape shape-b"></span>
+                        <span class="moving-shape shape-c"></span>
+                        <span class="moving-shape shape-d"></span>
+                        <span class="moving-shape shape-e"></span>
+                        <span class="moving-shape shape-f"></span>
+                        <span class="moving-shape shape-g"></span>
+                    </div>
+
+                    <div class="hero-text">
+                        <span data-i18n="webDevelopment">WEB DEVELOPMENT</span>
+                        <h1 data-i18n="cssAnimation">CSS Animation</h1>
+                        <p data-i18n="heroSlogan">Learn. Create. Develop.</p>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="heart-area">
+                        <div class="heart-media" id="heartMedia">
+                            <!-- 360-degree photogrammetry scan of a real human heart. -->
+                            <img
+                                class="heart-gif"
+                                src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Real_Human_Heart_Turntable.gif"
+                                alt="A real human heart specimen rotating through a 360-degree photogrammetry scan" data-i18n-alt="heartAlt"
+                                title="360-degree real human heart scan" data-i18n-title="heartTitle"
+                            >
+                        </div>
+
+                        <div class="heart-controls">
+                            <button class="heart-view-button" id="heartViewButton" type="button">
+                                <i class="fa-solid fa-cube"></i>
+                                <span data-i18n="explore3d">Explore in 3D</span>
+                            </button>
+                            <p class="heart-hint" id="heartHint" data-i18n="heartHint">
+                                The heart rotates automatically · open 3D to explore its view
+                            </p>
+                        </div>
+
+                        <p class="heart-credit">
+                            <span data-i18n="heartCredit">Real heart scan by</span>
+                            <a href="https://commons.wikimedia.org/wiki/File:Real_Human_Heart_Turntable.gif"
+                               target="_blank" rel="noopener noreferrer">DrJanaOfficial</a>
+                            · <a href="https://creativecommons.org/licenses/by-sa/4.0/"
+                                 target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INFORMATION -->
+            <section class="content-section">
+                <h2 id="pageTitle" data-i18n="mainTitle">HTML, CSS &amp; JavaScript</h2>
+                <p class="intro" data-i18n="intro">
+                    The web platform is built on three complementary technologies.
+                    Each has a distinct job, and together they form the foundation
+                    of modern web development.
+                </p>
+
+                <h3 data-i18n="htmlHeading">HTML</h3>
+                <div class="technology">
+                    <div class="tech-icon html-icon">HTML</div>
+                    <p data-i18n="htmlDescription">
+                        HTML (HyperText Markup Language) provides the structure
+                        of a web page, including paragraphs, links, images, and
+                        forms. It defines the content and organizes information.
+                    </p>
+                </div>
+
+                <h3 data-i18n="cssHeading">CSS</h3>
+                <div class="technology">
+                    <div class="tech-icon css-icon">CSS</div>
+                    <p data-i18n="cssDescription">
+                        CSS (Cascading Style Sheets) controls the visual presentation
+                        of HTML elements. It defines colors, spacing, typography,
+                        layouts, and animations.
+                    </p>
+                </div>
+
+                <h3 data-i18n="jsHeading">JavaScript</h3>
+                <div class="technology">
+                    <div class="tech-icon js-icon">JS</div>
+                    <p data-i18n="jsDescription">
+                        JavaScript adds interaction and dynamic behavior to websites.
+                        It allows developers to respond to user actions and update
+                        content.
+                    </p>
+                </div>
+            </section>
+
+            <!-- EXTRA CARDS -->
+            <section class="cards-section">
+                <h2 data-i18n="exploreHeading">Explore Web Development</h2>
+                <div class="cards">
+                    <article class="info-card">
+                        <i class="fa-brands fa-html5"></i>
+                        <h3 data-i18n="htmlBasics">HTML Basics</h3>
+                        <p data-i18n="htmlCardText">Learn how to structure web pages.</p>
+                        <button class="learn-btn" type="button" data-i18n="learnMore">Learn More</button>
+                    </article>
+                    <article class="info-card">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <h3 data-i18n="cssDesign">CSS Design</h3>
+                        <p data-i18n="cssCardText">Discover styles, layouts and animations.</p>
+                        <button class="learn-btn" type="button" data-i18n="learnMore">Learn More</button>
+                    </article>
+                    <article class="info-card">
+                        <i class="fa-brands fa-js"></i>
+                        <h3 data-i18n="jsCardTitle">JavaScript</h3>
+                        <p data-i18n="jsCardText">Make websites interactive and dynamic.</p>
+                        <button class="learn-btn" type="button" data-i18n="learnMore">Learn More</button>
+                    </article>
+                </div>
+            </section>
+
+            <footer>
+                <p data-i18n="footer">© 2026 Training 2026. All Rights Reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <button class="floating-btn" id="topBtn" type="button" title="Back to top" data-i18n-title="backToTop"
+            aria-label="Back to top" data-i18n-aria="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
